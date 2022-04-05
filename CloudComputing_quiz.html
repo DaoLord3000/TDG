@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="QuizStyle.css">
+<title>IBM badges</title>
+</head>
+<body>
+
+<div class="Header"><h1>Improving Healthcare: The Role of Cloud Computing</h1></div>
+<div class="Body">
+
+    <img src="CloudComputing_badge.png" alt="Cloud Computing Badge">
+
+    <p1>What are the major trends within the healthcare industry forcing healthcare to change their business and operating systems?</p1>
+    
+    <div class="DataQ1">
+    <label class="container">Fragmented healthcare industry
+        <input type="checkbox">
+        <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Evidence-based personalized medicine
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Interconnected and interoperable
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">All of the above
+            <input type="checkbox" id="Correct1">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <!-- Q1, Done, correct answew is All of the above -->
+    
+        <p2>With cloud computing, industries, companies, or individuals can achieve the levels of speed and agility required to compete and thrive.</p2>
+    
+        <div class="DataQ2">
+            <label class="container">True 
+                <input type="checkbox" id="Correct2">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">False
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+        </div>
+
+        <!-- Q2, Done, correct answew is True -->
+    
+        <p3>What is cloud computing?</p3>
+    
+        <div class="DataQ3">
+            <label class="container">Cloud computing is an emerging technology basket that makes everything easier to access
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Cloud computing is a means to better assess and manage risk
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Cloud computing is a general term for anything that involves the delivery of the technology over the Internet.
+                <input type="checkbox" id="Correct3">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Cloud computing is an increasingly complex solution for healthcare
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q3, Done, correct answew is Cloud computing is a general term for anything that involves the delivery of the technology over the Internet -->
+    
+        <p4>What are the three cloud delivery models?</p4>
+    
+        <div class="DataQ4">
+            <label class="container">Enterprise, Public, and Hybrid
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Public, Hybrid, and Private
+                <input type="checkbox" id="Correct4">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Semi-private, Hybrid, and Private
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Public, Hybrid, and Corporate
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q4, Done, correct answew is Public, Hybrid, and Private-->
+    
+        <p5>What are the four cloud service types?</p5>
+    
+        <div class="DataQ5">
+            <label class="container">TaaS, PaaS, SaaS, and BPaaS
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">CaaS, IaaS, PaaS, and SaaS
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">FaaS, BPaaS, PaaS, and SaaS
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">IaaS, PaaS, SaaS, and BPaaS
+                <input type="checkbox" id="Correct5">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q5, Done, correct answew is IaaS, PaaS, SaaS, and BPaaS-->
+
+        <input class="Submit"  type="submit" name="submit" value="submitQuiz" onclick="result()">
+    
+</div>
+
+<script type="text/javascript">
+    function result(){
+
+      var score=0;
+     if (document.getElementById('Correct1').checked){
+       score++;
+     }
+     if (document.getElementById('Correct2').checked){
+       score++;
+     }
+     if (document.getElementById('Correct3').checked){
+       score++;
+     }
+     if (document.getElementById('Correct4').checked){
+       score++;
+     }
+     if (document.getElementById('Correct5').checked){
+       score++;
+     }
+     if (score==0 || score==1 || score==2 || score==3 || score==4){
+    alert("Unfornuately you failed, your score is: " +score);
+    alert(location.href);
+    location.href = "IBMbadges.html";
+  }
+  else{
+    alert("Congratulations, your score is: " +score);
+    alert(location.href);
+    location.href = "Game link";
+  }
+    }
+</script>
+
+</body>
+</html>

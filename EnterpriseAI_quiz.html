@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="QuizStyle.css">
+<title>IBM badges</title>
+</head>
+<body>
+
+<div class="Header"><h1>Getting Started with Enterprise-grade AI</h1></div>
+<div class="Body">
+    <img src="EnterpriseAI_badge.png" alt="Cloud Computing Badge">
+
+    <p1>The key difference between narrow intelligence and broad intelligence is best described by which of the following phrases?</p1>
+    
+    <div class="DataQ1">
+    <label class="container">Narrow and Broad intelligence is distinguished by the complexity of algorithms
+        <input type="checkbox">
+        <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Broad intelligence requires huge amounts of data, whereas narrow intelligence relies on minimum data
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Narrow AI can only do a certain task—and it can do it quite well, but narrow AI can’t transfer its knowledge to different sorts of problems as with Broad AI
+            <input type="checkbox" id="Correct1">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Broad intelligence can extract meaning from images, whereas Narrow Intelligence is best suited for language processing
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <!-- Q1, Done, correct answew is Narrow AI can only do a certain task—and it can do it quite well, but narrow AI can’t transfer its knowledge to different sorts of problems as with Broad AI-->
+    
+        <p2>Which of the following best depict or exemplify Broad AI?</p2>
+    
+        <div class="DataQ2">
+            <label class="container">A self-driving car, which happens to be a collection of narrow AI technologies
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">A system that supports engineers who work on complex maintenance tasks on a platform in the middle of the Atlantic Ocean
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="container">A system within a bank that analyzes the balance sheet of corporate customers to recommend the best currency hedging strategy
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">All the above
+                <input type="checkbox" id="Correct2">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q2, Done, correct answew is All the above-->
+    
+        <p3>Which of the following best depicts General AI?</p3>
+    
+        <div class="DataQ3">
+            <label class="container">A chatbot that is also connected to Tone Analyzer
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Watson Machine Learning service
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">The ability to use previous experiences to come up with new creative ideas
+                <input type="checkbox" id="Correct3">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">A system that is self-aware
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q3, Done, correct answew is The ability to use previous experiences to come up with new creative ideas-->
+    
+        <p4>How does IBM view the impact of artificial intelligence?</p4>
+    
+        <div class="DataQ4">
+            <label class="container">It is here to augment human intelligence
+                <input type="checkbox" id="Correct4">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">It is how systems predict the future
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">It is about automating mundane tasks that humans do
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">It is about the quest for artificial general intelligence (AGI)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q4, Done, correct answew is It is here to augment human intelligence-->
+    
+        <p5>Which of the following is a key contributor to the evolution of modern AI system?</p5>
+    
+        <div class="DataQ5">
+            <label class="container">Explosive growth of available data from social media, sensors, and smart devices
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">
+                Development of advanced computational algorithms
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Modern computers have far greater power than they did in the 1950s
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">All of the Above
+                <input type="checkbox" id="Correct5">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q5, Done, correct answew is All of the Above-->
+
+        <input class="Submit"  type="submit" name="submit" value="submitQuiz" onclick="result()">
+
+</div>
+
+<script type="text/javascript">
+  function result(){
+
+    var score=0;
+   if (document.getElementById('Correct1').checked){
+     score++;
+   }
+   if (document.getElementById('Correct2').checked){
+     score++;
+   }
+   if (document.getElementById('Correct3').checked){
+     score++;
+   }
+   if (document.getElementById('Correct4').checked){
+     score++;
+   }
+   if (document.getElementById('Correct5').checked){
+     score++;
+   }
+   if (score==0 || score==1 || score==2 || score==3 || score==4){
+    alert("Unfornuately you failed, your score is: " +score);
+    alert(location.href);
+    location.href = "IBMbadges.html";
+  }
+  else{
+    alert("Congratulations, your score is: " +score);
+    alert(location.href);
+    location.href = "Game link";
+  }
+  }
+</script>
+
+</body>
+</html>

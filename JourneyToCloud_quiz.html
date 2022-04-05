@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="QuizStyle.css">
+<title>IBM badges</title>
+</head>
+<body>
+
+<div class="Header"><h1>Journey to Cloud: Envisioning Your Solution</h1></div>
+<div class="Body">
+
+        <img src="JourneyToCloud.png" alt="Cloud Computing Badge">
+
+        <p1>Infrastructure as a service (IaaS) provides companies _________________.</p1>
+        
+        <div class="DataQ1">
+            <label class="container">With computing resources including servers, networking, storage, and data center space on a pay-per-use basis.
+                <input type="checkbox" id="Correct1">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Distant computers “in the cloud“ that are owned and operated by others and that connect to a users‘ computer via the Internet and usually a web browser
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">A cloud-based environment with everything required to support the complete lifecycle of building and delivering web-based (cloud) applications
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="container">All of the above
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q1, Done, correct answer is With computing resources including servers, networking, storage, and data center space on a pay-per-use basis.-->
+    
+        
+            <p2>Cloud services that facilitate team communication and information sharing in real-time. This benefit of cloud is best encapsulated by which of the following cloud business enablers?</p2>
+        
+            <div class="DataQ2">
+                <label class="container">Market Adaptability
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Masked Complexity
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+    
+                  <label class="container">Context-driven Variability
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Ecosystem Connectivity
+                    <input type="checkbox" id="Correct2">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+    
+            <!-- Q2, Done, correct answew is Ecosystem Connectivity -->
+        
+            <p3>Company X owns and manages all its hardware and software, which are housed in an onsite Data Center. Which of the following describes the IT infrastructure that Company X employs?</p3>
+        
+            <div class="DataQ3">
+                <label class="container">Traditional Infrastructure
+                    <input type="checkbox" id="Correct3">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Public Cloud Infrastructure
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Private Cloud Infrastructure
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Hybrid Cloud Infrastructure
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+    
+            <!-- Q3, Done, correct answer is Traditional Infrastructure-->
+        
+            <p4>An organization using Traditional IT infrastructure may choose not to adopt a cloud deployment model for all of the following reasons EXCEPT:</p4>
+        
+            <div class="DataQ4">
+                <label class="container">The system works just fine as is
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Cloud Service Providers often lock organizations into lengthy and expensive contracts
+                    <input type="checkbox" id="Correct4">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Cloud migration is seen as being too costly and time-consuming
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">The data owned by the organization is too sensitive to be trusted to a third-party provider
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+    
+            <!-- Q4, Done, correct answew is Cloud Service Providers often lock organizations into lengthy and expensive contracts-->
+
+            <p5>The ability for businesses to rent computing services and software from a cloud service provider on a per unit or per month basis is best encapsulated by?</p5>
+        
+            <div class="DataQ5">
+            <label class="container">Business Scalability
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Cost Flexibility
+                    <input type="checkbox" id="Correct5">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Masked Complexity
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                  <label class="container">Market Adaptability
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+        
+                <!-- Q5, Done, correct answew is Cost Flexibility-->
+        
+                <input class="Submit"  type="submit" name="submit" value="submitQuiz" onclick="result()">
+</div>
+
+<script type="text/javascript">
+  function result(){
+
+    var score=0;
+   if (document.getElementById('Correct1').checked){
+     score++;
+   }
+   if (document.getElementById('Correct2').checked){
+     score++;
+   }
+   if (document.getElementById('Correct3').checked){
+     score++;
+   }
+   if (document.getElementById('Correct4').checked){
+     score++;
+   }
+   if (document.getElementById('Correct5').checked){
+     score++;
+   }
+   if (score==0 || score==1 || score==2 || score==3 || score==4){
+    alert("Unfornuately you failed, your score is: " +score);
+    alert(location.href);
+    location.href = "IBMbadges.html";
+  }
+  else{
+    alert("Congratulations, your score is: " +score);
+    alert(location.href);
+    location.href = "Game link";
+  }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="QuizStyle.css">
+<title>IBM badges</title>
+</head>
+<body>
+
+<div class="Header"><h1>Getting Started with Enterprise Data Science</h1></div>
+<div class="Body">
+    <img src="EnterpriseData_badge.png" alt="Cloud Computing Badge">
+
+    <p1>Which of the following tasks is a typical role of data journalist</p1>
+    
+    <div class="DataQ1">
+    <label class="container">Choosing ML models
+        <input type="checkbox">
+        <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Tweaking the hyper parameters of a neural network
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Visualizing the data
+            <input type="checkbox" id="Correct1">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Training ML models
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <!-- Q1, Done, correct answew is Visualizing the data -->
+    
+        <p2>Which of the following is one of the most fundamental characteristics of a data scienctist?</p2>
+    
+        <div class="DataQ2">
+            <label class="container">Being proficient in R or Python 
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Having a sense of curiosity about all things
+                <input type="checkbox" id="Correct2">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="container">Using open source software libraries and packages 
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">having a strong background in high power computing (HPC)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q2, Done, correct answew is Having a sense of curiosity about all things -->
+    
+        <p3>The evolution of data science started in late 1890 with the advent of tabulating machines. Which of the following best decpict its trajectory and evolution over the years</p3>
+    
+        <div class="DataQ3">
+            <label class="container">Moving from structured data to unstructurd data
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">The use of regression in data science
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Moving from supporting statistical analysis to machine earning approaches
+                <input type="checkbox" id="Correct3">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">The advances domain expertise
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q3, Done, correct answew is Moving from supporting statistical analysis to machine learning approaches-->
+    
+        <p4>When thinking of the 5 main Vs of data, what does veracity refer to?</p4>
+    
+        <div class="DataQ4">
+            <label class="container">Refers to the vast amount of data generated every second
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Refers to the different types of data that we can use
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Refers to the speed at which new data is generated and the speed at which data moves around
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Refers to the messiness and trustorthiness of the data
+                <input type="checkbox" id="Correct4">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q4, Done, correct answew is Refers to the messiness and trustorthiness of the data-->
+    
+        <p5>As a data journalist, which of the following tasks are more germane to your role?</p5>
+    
+        <div class="DataQ5">
+            <label class="container">Comunication skills
+                <input type="checkbox" id="Correct5">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Database and data storage
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Scripting language
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Cloud Infrastructure
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q5, Done, correct answew is Comunication skills-->
+
+        <input class="Submit"  type="submit" name="submit" value="submitQuiz" onclick="result()">
+
+</div>
+
+<script type="text/javascript">
+  function result(){
+
+    var score=0;
+   if (document.getElementById('Correct1').checked){
+     score++;
+   }
+   if (document.getElementById('Correct2').checked){
+     score++;
+   }
+   if (document.getElementById('Correct3').checked){
+     score++;
+   }
+   if (document.getElementById('Correct4').checked){
+     score++;
+   }
+   if (document.getElementById('Correct5').checked){
+     score++;
+   }
+   if (score==0 || score==1 || score==2 || score==3 || score==4){
+    alert("Unfornuately you failed, your score is: " +score);
+    alert(location.href);
+    location.href = "IBMbadges.html";
+  }
+  else{
+    alert("Congratulations, your score is: " +score);
+    alert(location.href);
+    location.href = "Game link";
+  }
+  }
+</script>
+
+</body>
+</html>

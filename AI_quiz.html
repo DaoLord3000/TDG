@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="QuizStyle.css">
+<title>IBM badges</title>
+</head>
+<body>
+
+<div class="Header"><h1>Improving Healthcare: The Role of Artificial Intelligence</h1></div>
+<div class="Body">
+
+    <img src="AI_badge.png" alt="Cloud Computing Badge">
+
+    <p1>AI in healthcare is different from AI that is portrayed in popular culture like books and films, because:</p1>
+    
+    <div class="DataQ1">
+    <label class="container">Movies and books typically portray AI as self-aware
+        <input type="checkbox">
+        <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">AI in real-life is more often likely to be a phone app than a human-like robot
+            <input type="checkbox"  id="Correct1">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">AI in healthcare is more likely to be used to read medical images than plot your demise
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">All of the above
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <!-- Q1, Done, correct answew is AI in real-life is more often likely to be a phone app than a human-like robot -->
+    
+        <p2>Deep learning is a subset of machine learning which is a subset of artificial intelligence.</p2>
+    
+        <div class="DataQ2">
+            <label class="container">True 
+                <input type="checkbox" id="Correct2">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">False
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+        </div>
+
+        <!-- Q2, Done, correct answew is True -->
+    
+        <p3>If AI is everywhere, select the ways in which AI can be recognized in healthcare?</p3>
+    
+        <div class="DataQ3">
+            <label class="container">Speech recognition
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Natural Language Processing (NLP)
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Image recognition
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">All of the above
+                <input type="checkbox" id="Correct3">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q3, Done, correct answew is All of the above-->
+    
+        <p4>Augmented intelligence means:</p4>
+    
+        <div class="DataQ4">
+            <label class="container">A virtual reality user interface for AI
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Artificial intelligence using machines amplifying human intelligence (humans + machine)
+                <input type="checkbox" id="Correct4">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Artificial intelligence is used to replace humans experts
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Artificial intelligence represents copying human intelligence using machines
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q4, Done, correct answew is Artificial intelligence using machines amplifying human intelligence (humans + machine)-->
+    
+        <p5>What are the key attributes of a cognitive system?</p5>
+    
+        <div class="DataQ5">
+            <label class="container">Understanding, learning, reasoning, and interacting
+                <input type="checkbox" id="Correct5">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Interacting, explaining, deciphering, and learning
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Applying, learning, understanding, and interacting
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container">Designing, learning, applying, and understanding
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+        </div>
+
+        <!-- Q5, Done, correct answew is Understanding, learning, reasoning, and interacting-->
+
+        <input class="Submit"  type="submit" name="submit" value="submitQuiz" onclick="result()">
+
+</div>
+
+<script type="text/javascript">
+  function result(){
+
+    var score=0;
+   if (document.getElementById('Correct1').checked){
+     score++;
+   }
+   if (document.getElementById('Correct2').checked){
+     score++;
+   }
+   if (document.getElementById('Correct3').checked){
+     score++;
+   }
+   if (document.getElementById('Correct4').checked){
+     score++;
+   }
+   if (document.getElementById('Correct5').checked){
+     score++;
+   }
+   if (score==0 || score==1 || score==2 || score==3 || score==4){
+    alert("Unfornuately you failed, your score is: " +score);
+    alert(location.href);
+    location.href = "IBMbadges.html";
+  }
+  else{
+    alert("Congratulations, your score is: " +score);
+    alert(location.href);
+    location.href = "Game link";
+  }
+  }
+</script>
+
+</body>
+</html>

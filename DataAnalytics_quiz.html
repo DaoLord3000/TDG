@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="QuizStyle.css">
+<title>IBM badges</title>
+</head>
+<body>
+
+<div class="Header"><h1>Improving Healthcare: The Role of Data Analytics & Data Science</h1></div>
+<div class="Body">
+    <img src="DataAnalytics_badge.png" alt="Data Analytics Badge">
+
+    <p1>Select the correct statement.</p1>
+
+    <div class="DataQ1">
+    <label class="container">Raw data is original source data
+        <input type="checkbox" id="Correct1">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Preprocessed data is original source data
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Raw data is the data obtained after processing steps
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="container">Data visualization of raw data is an important analytic step
+        <input type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+      <!-- Raw data is original source data, is correct -->
+
+    <p2>Which of the following characteristic of Big Data is of relatively more concern to data science?</p2>
+
+    <div class="DataQ2">
+        <label class="container">Velocity
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Variety
+            <input type="checkbox" id="Correct2">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Volume
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Non of the above
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+    </div>
+
+    <!-- Variety is correct -->
+
+    <p3>Which of the following correctly shows approximate order of difficulty for types of data analytics?</p3>
+
+    <div class="DataQ3">
+        <label class="container">Predictive, Prescriptive, Descriptive, Diagnostic
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Diagnostic, Descriptive, Predictive, Prescriptive
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Descriptive, Diagnostic, Predictive, Prescriptive
+            <input type="checkbox" id="Correct3">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Descriptive, Predictive, Prescriptive, Diagnostic
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+    </div>
+    
+    <!-- Descriptive, Diagnostic, Predictive, Prescriptive is correct -->
+
+    <p4>Which of the following step is performed by data scientist after acquiring the data?</p4>
+
+    <div class="DataQ4">
+        <label class="container">Data Cleansing
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Data Integration
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Exploratory Data Analysis
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">All of the above
+            <input type="checkbox" id="Correct4">
+            <span class="checkmark"></span>
+          </label>
+    </div>
+
+    <!-- All of the above is correct -->
+
+    <p5>Which of the following type of data analytics analyzes data and builds analytics models to identify future outcomes?</p5>
+
+    <div class="DataQ5">
+        <label class="container">Inferential
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Exploratory
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">Predictive
+            <input type="checkbox" id="Correct5">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="container">None of the above
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+    </div>
+
+    <!-- Predictive is correct -->
+
+    <input class="Submit" type="submit" name="submit" value="submitQuiz" onclick="result()">
+</div>
+
+<script type="text/javascript">
+  function result(){
+
+    var score=0;
+   if (document.getElementById('Correct1').checked){
+     score++;
+   }
+   if (document.getElementById('Correct2').checked){
+     score++;
+   }
+   if (document.getElementById('Correct3').checked){
+     score++;
+   }
+   if (document.getElementById('Correct4').checked){
+     score++;
+   }
+   if (document.getElementById('Correct5').checked){
+     score++;
+   }
+   if (score==0 || score==1 || score==2 || score==3 || score==4){
+    alert("Unfornuately you failed, your score is: " +score);
+    alert(location.href);
+    location.href = "Game.html";
+  }
+  else{
+    alert("Congratulations, your score is: " +score);
+    alert(location.href);
+    location.href = "index.html";
+  }
+  }
+</script>
+
+</body>
+</html>
+
+<!-- Didn't work as i ised value keyword instaed of ID -->
